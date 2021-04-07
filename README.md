@@ -1,6 +1,12 @@
 # NextGateTech
- Quant Test
+ Quant Developper Test
 
- AxAxA1
+Alexis Aubert | AxAxA1
 
- See notebook first
+Part A : completed
+  - See notebook first
+  - Run main.py
+  - tools.py : auxilary functions to read data or to connect to firebase
+  - data.py : tests and correlations
+ 
+ Part B : coming up
