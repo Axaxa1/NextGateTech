@@ -3,10 +3,6 @@ from data import *
 
 
 if __name__ == '__main__':
-    # Login Test
-    login("x-catwalk-310216-7a3d795785fc.json")
-
-
     # Load training dataset
     data = create_data("Data/example.csv")
 
