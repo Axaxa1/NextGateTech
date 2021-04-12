@@ -1,9 +1,8 @@
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
 import firebase_admin
-from firebase_admin import credentials, firestore
+from firebase_admin import credentials, firestore, auth
 from data import test_no_nan, compute_correlations
+
 
 
 def create_data(path):
@@ -62,6 +61,7 @@ def update_test(data, datab):
     # -- Update no_nan_test
     # Get document ref
     no_nan_ref = datab.collection(u'tests').document(u'no_nan')
+    print("NO NAN REF :",no_nan_ref)
     # Run test
     t = test_no_nan(data)
     # Adapt the structure
@@ -87,4 +87,7 @@ def update_correlations(nav_data, datab):
         for col2 in corr.columns:
             corr_data[col2] = corr[col][col2]
         corr_ref.set(corr_data)
+
+
+
 
